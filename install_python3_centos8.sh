@@ -52,4 +52,8 @@ echo "Python 3.13 added to path."
 #Verify path addition.
 python3.13 --version
 
+
+echo "Set the new Python3.19 executable as default"
+alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.13 1 && alternatives --set python3 /usr/local/bin/python3.13 && echo "2" | alternatives --config python
+
 exit 0
